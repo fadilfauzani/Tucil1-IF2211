@@ -36,10 +36,6 @@ typedef struct board
     int sizeRow,sizeCol;
 } board;
 
-
-
-
-
 int ansCount;
 char fileName[22] = "../test/testcasex.txt";
 int testCount = 0;
@@ -53,60 +49,35 @@ string takeStringfromBoard(board b, int fromRow, int fromCol, int size, unsigned
     {
     case 1:
         /* Kekanan */
-        for (int i = 0; i < size; i++) {
-            Char(res, i) = Board(b, fromRow, fromCol + i).c;
-            count++;
-        };
+        for (int i = 0; i < size; i++) Char(res, i) = Board(b, fromRow, fromCol + i).c;
         break;
     case 2:
         /* ke kiri */
-        for (int i = 0; i < size; i++) {
-            Char(res, i) = Board(b, fromRow, fromCol - i).c;
-            count++;
-
-        };
+        for (int i = 0; i < size; i++) Char(res, i) = Board(b, fromRow, fromCol - i).c;
         break;
     case 3:
         /* kebawah */
-        for (int i = 0; i < size; i++) {
-            Char(res, i) = Board(b, fromRow + i, fromCol).c;
-            count++;
-        };
+        for (int i = 0; i < size; i++) Char(res, i) = Board(b, fromRow + i, fromCol).c;
         break;
     case 4:
         /* ke atas*/
-        for (int i = 0; i < size; i++) {
-            Char(res, i) = Board(b, fromRow - i, fromCol).c;
-            count++;
-        };
+        for (int i = 0; i < size; i++) Char(res, i) = Board(b, fromRow - i, fromCol).c;
         break;
     case 5:
         /* miring Tenggara (bawah kanan)*/
-        for (int i = 0; i < size; i++) {
-            Char(res, i) = Board(b, fromRow + i, fromCol + i).c;
-            count++;
-        };
+        for (int i = 0; i < size; i++) Char(res, i) = Board(b, fromRow + i, fromCol + i).c;
         break;
     case 6:
         /* miring Barat daya (bawah kiri)*/
-        for (int i = 0; i < size; i++) {
-            Char(res, i) = Board(b, fromRow + i, fromCol - i).c;
-            count++;
-        };
+        for (int i = 0; i < size; i++) Char(res, i) = Board(b, fromRow + i, fromCol - i).c;
         break;
     case 7:
         /* miring Barat laut (kiri atas)*/
-        for (int i = 0; i < size; i++) {
-            Char(res, i) = Board(b, fromRow - i, fromCol - i).c;
-            count++;
-        };
+        for (int i = 0; i < size; i++) Char(res, i) = Board(b, fromRow - i, fromCol - i).c;
         break;
     case 8:
         /* miring Timur laut (kanan atas)*/
-        for (int i = 0; i < size; i++) {
-            Char(res, i) = Board(b, fromRow - i, fromCol + i).c;
-            count++;
-        };
+        for (int i = 0; i < size; i++) Char(res, i) = Board(b, fromRow - i, fromCol + i).c;
         break;
     default:
         break;
